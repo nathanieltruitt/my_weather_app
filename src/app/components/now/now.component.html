@@ -1,0 +1,20 @@
+<!-- TODO: Build out Now Component template -->
+<!-- TODO: Add changing fahrenheit to celcius -->
+<!-- TODO: get weather code icons -->
+<div *ngIf="weatherData" class="container bg-light board">
+  <div id="weathercontainer" class="row" style="overflow-x: auto">
+    <div
+      class="col-lg-2 weather-card"
+      *ngFor="let weather of weatherData.properties.periods"
+    >
+      <div class="card">
+        <!-- <img [src]="weather.icon" alt="" /> -->
+        <div class="card-body">
+          <h5 class="text-center">{{ weather.temperature + getTempType() }}</h5>
+          <h4 class="text-center">{{ weather.name }}</h4>
+          <p style="font-size: 12px">{{ weather.detailedForecast }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

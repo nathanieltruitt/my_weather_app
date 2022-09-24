@@ -1,0 +1,18 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "name": "paducah",
+      "forecastOffice": "PAH",
+      "latitude": 131,
+      "longitude": 54
+    },
+    {
+      "id": 2,
+      "name": "nashville",
+      "forecastOffice": "OHX",
+      "latitude": 49,
+      "longitude": 56
+    }
+  ]
+}
