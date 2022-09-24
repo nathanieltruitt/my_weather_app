@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
-  selector: 'app-now',
-  templateUrl: './now.component.html',
-  styleUrls: ['./now.component.css'],
+  selector: 'app-hourly',
+  templateUrl: './hourly.component.html',
+  styleUrls: ['./hourly.component.css'],
 })
-export class NowComponent implements OnInit {
+export class HourlyComponent implements OnInit {
   weatherData!: any;
 
   constructor(private weatherService: WeatherService) {}
@@ -15,13 +15,5 @@ export class NowComponent implements OnInit {
     this.weatherService.weatherData.subscribe((w) => {
       this.weatherData = w;
     });
-  }
-
-  getTempType() {
-    return this.weatherService.temperatureType;
-  }
-
-  ngOnDestroy() {
-    this.weatherService.weatherData.unsubscribe();
   }
 }
