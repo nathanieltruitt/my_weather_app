@@ -7,8 +7,18 @@
 
 .board {
   height: 75%;
+  display: flex;
+  overflow-x: auto;
 }
 
 #weathercontainer {
-  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.weather-card {
+  display: flex;
+  justify-content: center;
 }

@@ -2,17 +2,22 @@
 <!-- TODO: Add changing fahrenheit to celcius -->
 <!-- TODO: get weather code icons -->
 <div *ngIf="weatherData" class="container bg-light board">
-  <div id="weathercontainer" class="row" style="overflow-x: auto">
+  <div id="weathercontainer">
     <div
-      class="col-lg-2 weather-card"
+      class="weather-card"
       *ngFor="let weather of weatherData.properties.periods"
+      style="width: 5%; height: 75%; margin: 10px"
     >
-      <div class="card">
+      <div class="card" style="width: 100%; height: 100%">
         <!-- <img [src]="weather.icon" alt="" /> -->
-        <div class="card-body">
-          <h5 class="text-center">{{ weather.temperature + getTempType() }}</h5>
+        <div class="card-body" style="width: 100%">
           <h4 class="text-center">{{ weather.name }}</h4>
-          <p style="font-size: 12px">{{ weather.detailedForecast }}</p>
+          <p class="text-center" style="font-size: 4rem">
+            {{ weather.temperature + getTempType() }}
+          </p>
+          <p class="text-center" style="font-size: 12px">
+            {{ weather.detailedForecast }}
+          </p>
         </div>
       </div>
     </div>
